@@ -7,8 +7,22 @@ puts "Вітаю, #{name} !"
 puts "Компютер загадав випадкове число від 0 до 100."
 puts "Спробуєш відгадати ?"
 target = rand (100) +1
-puts "Ти маєш #{10}"
-
-print "Make a guess: "
+num_guesses = 0
+guessed_it = false
+puts "Ти маєш  #{10 — num_guesses} спроб"
+print "Спробуй"
 guess = gets.to_i
+if guess < target
+  puts "Твоя відповідь нижче."
+elsif guess > target
+  puts "Твоя відповідь вижче."
+elsif guess == target
+  puts "Супер #{name}!"
+  puts "Правильна відпрвідь #{num_guesses} !"
+  guessed_it = true
+end
+if not guessed_it
+  puts "Ти невгадав число (це число #{target}.)"
+end
+
 
