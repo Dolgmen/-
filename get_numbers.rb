@@ -9,8 +9,8 @@ puts "Спробуєш відгадати ?"
 target = rand (100) +1
 num_guesses = 0
 guessed_it = false
-while num_guesses <10 && guessed_it == false
-puts "Ти маєш  #{10 — num_guesses} спроб"
+while num_guesses <= 10 && guessed_it == false
+puts "Ти маєш  #{10 - num_guesses} спроб"
 print "Спробуй"
 guess = gets.to_i
 num_guesses += 1
